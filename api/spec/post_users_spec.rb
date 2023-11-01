@@ -1,22 +1,28 @@
 require "httparty"
 
 describe "POST /users" do
-  it "cadastro com sucesso" do
-    payload = {
-      name: "Nicolas Kumabe",
-      username: "nicolasokumabe",
-      password: "pwd123",
-    }
+  context "cadastro com sucesso" do
+    before(:all) do
+      payload = {
+        name: "Nicolas Kumabe",
+        username: "nicolasokumabe",
+        password: "pwd123",
+      }
 
-    result = HTTParty.post(
-      "http://localhost:8080/users/",
-      body: payload.to_json,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    )
+      @result = HTTParty.post(
+        "http://localhost:8080/users/",
+        body: payload.to_json,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      )
+    end
+    it "valida status code" do
+      expect(@result.code).to eql 200
+    end
 
-    expect(result.code).to eql 200
-    expect(result.parsed_response["id"].length).to eql 36
+    it "valida id do usuário" do
+      expect(@result.parsed_response["id"].length).to eql 36
+    end
   end
 end
