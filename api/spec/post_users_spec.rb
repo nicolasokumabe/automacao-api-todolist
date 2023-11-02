@@ -3,7 +3,8 @@ require_relative "routes/users"
 describe "POST /users" do
   context "cadastro com sucesso" do
     before(:all) do
-      @result = Users.new.cadastro("Nicolas Kumabe", "nicolasokumabe", "pwd123")
+      payload = { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" }
+      @result = Users.new.cadastro(payload)
     end
     it "valida status code" do
       expect(@result.code).to eql 200
@@ -16,11 +17,9 @@ describe "POST /users" do
 
   context "usuário existente" do
     before(:all) do
-      @result = Users.new.cadastro(
-        "Nicolas Kumabe",
-        "nicolasokumabe",
-        "pwd123",
-      )
+      payload = { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" }
+
+      @result = Users.new.cadastro(payload)
     end
     it "valida status code" do
       expect(@result.code).to eql 400
