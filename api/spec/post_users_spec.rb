@@ -6,7 +6,7 @@ describe "POST /users" do
       payload = { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" }
       @result = Users.new.cadastro(payload)
     end
-    it "valida status code" do
+    it "valida status code 200" do
       expect(@result.code).to eql 200
     end
 
@@ -15,63 +15,63 @@ describe "POST /users" do
     end
   end
 
-  context "usuário existente" do
-    before(:all) do
-      payload = { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" }
+  examples = [
+    {
+      title: "usuario existente",
+      payload: { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" },
+      code: 400,
+      error: "Usuário já existe",
+    },
+    {
+      title: "username em branco",
+      payload: { name: "Nicolas Kumabe", username: "", password: "pwd123" },
+      code: 400,
+      error: "Username é um campo obrigatório",
+    },
+    {
+      title: "senha em branco",
+      payload: { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "" },
+      code: 400,
+      error: "Senha é um campo obrigatório",
+    },
+    {
+      title: "nome em branco",
+      payload: { name: "", username: "nicolasokumabe", password: "pwd123" },
+      code: 400,
+      error: "Nome é um campo obrigatório",
+    },
+    {
+      title: "sem o campo nome",
+      payload: { username: "nicolasokumabe", password: "pwd123" },
+      code: 400,
+      error: "Nome é um campo obrigatório",
+    },
+    {
+      title: "sem o campo username",
+      payload: { name: "Nicolas Kumabe", password: "pwd123" },
+      code: 400,
+      error: "Username é um campo obrigatório",
+    },
+    {
+      title: "sem o campo senha",
+      payload: { name: "Nicolas Kumabe", username: "nicolasokumabe" },
+      code: 400,
+      error: "Senha é um campo obrigatório",
+    },
+  ]
 
-      @result = Users.new.cadastro(payload)
-    end
-    it "valida status code" do
-      expect(@result.code).to eql 400
-    end
+  examples.each do |e|
+    context "#{e[:title]}" do
+      before(:all) do
+        @result = Users.new.cadastro(e[:payload])
+      end
+      it "valida status code #{e[:code]}" do
+        expect(@result.code).to eql e[:code]
+      end
 
-    it "valida id do usuário" do
-      expect(@result.parsed_response).to eql "Erro: Usuário já existe"
-    end
-  end
-
-  context "cadastro sem username" do
-    before(:all) do
-      payload = { name: "Nicolas Kumabe", username: "", password: "pwd123" }
-
-      @result = Users.new.cadastro(payload)
-    end
-    it "valida status code" do
-      expect(@result.code).to eql 400
-    end
-
-    it "valida id do usuário" do
-      expect(@result.parsed_response).to eql "Erro: Username é um campo obrigatório"
-    end
-  end
-
-  context "cadastro sem senha" do
-    before(:all) do
-      payload = { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "" }
-
-      @result = Users.new.cadastro(payload)
-    end
-    it "valida status code" do
-      expect(@result.code).to eql 400
-    end
-
-    it "valida id do usuário" do
-      expect(@result.parsed_response).to eql "Erro: Senha é um campo obrigatório"
-    end
-  end
-
-  context "cadastro sem nome" do
-    before(:all) do
-      payload = { name: "", username: "nicolasokumabe", password: "pwd123" }
-
-      @result = Users.new.cadastro(payload)
-    end
-    it "valida status code" do
-      expect(@result.code).to eql 400
-    end
-
-    it "valida id do usuário" do
-      expect(@result.parsed_response).to eql "Erro: Nome é um campo obrigatório"
+      it "valida id do usuário" do
+        expect(@result.parsed_response["error"]).to eql e[:error]
+      end
     end
   end
 end
