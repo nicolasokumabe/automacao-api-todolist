@@ -1,4 +1,5 @@
 require_relative "routes/users"
+require_relative "helpers"
 
 describe "POST /users" do
   context "cadastro com sucesso" do
@@ -15,50 +16,54 @@ describe "POST /users" do
     end
   end
 
-  examples = [
-    {
-      title: "usuario existente",
-      payload: { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" },
-      code: 400,
-      error: "Usuário já existe",
-    },
-    {
-      title: "username em branco",
-      payload: { name: "Nicolas Kumabe", username: "", password: "pwd123" },
-      code: 400,
-      error: "Username é um campo obrigatório",
-    },
-    {
-      title: "senha em branco",
-      payload: { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "" },
-      code: 400,
-      error: "Senha é um campo obrigatório",
-    },
-    {
-      title: "nome em branco",
-      payload: { name: "", username: "nicolasokumabe", password: "pwd123" },
-      code: 400,
-      error: "Nome é um campo obrigatório",
-    },
-    {
-      title: "sem o campo nome",
-      payload: { username: "nicolasokumabe", password: "pwd123" },
-      code: 400,
-      error: "Nome é um campo obrigatório",
-    },
-    {
-      title: "sem o campo username",
-      payload: { name: "Nicolas Kumabe", password: "pwd123" },
-      code: 400,
-      error: "Username é um campo obrigatório",
-    },
-    {
-      title: "sem o campo senha",
-      payload: { name: "Nicolas Kumabe", username: "nicolasokumabe" },
-      code: 400,
-      error: "Senha é um campo obrigatório",
-    },
-  ]
+  # examples = [
+  #   {
+  #     title: "usuario existente",
+  #     payload: { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" },
+  #     code: 400,
+  #     error: "Usuário já existe",
+  #   },
+  #   {
+  #     title: "username em branco",
+  #     payload: { name: "Nicolas Kumabe", username: "", password: "pwd123" },
+  #     code: 400,
+  #     error: "Username é um campo obrigatório",
+  #   },
+  #   {
+  #     title: "senha em branco",
+  #     payload: { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "" },
+  #     code: 400,
+  #     error: "Senha é um campo obrigatório",
+  #   },
+  #   {
+  #     title: "nome em branco",
+  #     payload: { name: "", username: "nicolasokumabe", password: "pwd123" },
+  #     code: 400,
+  #     error: "Nome é um campo obrigatório",
+  #   },
+  #   {
+  #     title: "sem o campo nome",
+  #     payload: { username: "nicolasokumabe", password: "pwd123" },
+  #     code: 400,
+  #     error: "Nome é um campo obrigatório",
+  #   },
+  #   {
+  #     title: "sem o campo username",
+  #     payload: { name: "Nicolas Kumabe", password: "pwd123" },
+  #     code: 400,
+  #     error: "Username é um campo obrigatório",
+  #   },
+  #   {
+  #     title: "sem o campo senha",
+  #     payload: { name: "Nicolas Kumabe", username: "nicolasokumabe" },
+  #     code: 400,
+  #     error: "Senha é um campo obrigatório",
+  #   },
+  # ]
+
+  # puts examples.to_json
+
+  examples = Helpers::get_fixture("cadastro")
 
   examples.each do |e|
     context "#{e[:title]}" do
