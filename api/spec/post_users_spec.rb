@@ -70,6 +70,7 @@ describe "POST /users" do
       before(:all) do
         @result = Users.new.cadastro(e[:payload])
       end
+
       it "valida status code #{e[:code]}" do
         expect(@result.code).to eql e[:code]
       end
