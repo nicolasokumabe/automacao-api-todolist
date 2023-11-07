@@ -75,7 +75,7 @@ describe "POST /users" do
         expect(@result.code).to eql e[:code]
       end
 
-      it "valida id do usuário" do
+      it "valida mensagem de erro" do
         expect(@result.parsed_response["error"]).to eql e[:error]
       end
     end
