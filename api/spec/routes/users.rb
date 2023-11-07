@@ -1,9 +1,6 @@
-require "httparty"
+require_relative "base_api"
 
-class Users
-  include HTTParty
-  base_uri "http://localhost:8080"
-
+class Users < BaseApi
   def create(payload)
     return self.class.post(
              "/users/",

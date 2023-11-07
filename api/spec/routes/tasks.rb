@@ -1,9 +1,6 @@
-require "httparty"
+require_relative "base_api"
 
-class Tasks
-  include HTTParty
-  base_uri "http://localhost:8080"
-
+class Tasks < BaseApi
   def create(payload)
     username = "nicolasokumabe"
     password = "pwd123"
