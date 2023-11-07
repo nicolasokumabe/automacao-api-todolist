@@ -5,7 +5,7 @@ describe "POST /users" do
   context "cadastro com sucesso" do
     before(:all) do
       payload = { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" }
-      @result = Users.new.cadastro(payload)
+      @result = Users.new.create(payload)
     end
     it "valida status code 200" do
       expect(@result.code).to eql 200
@@ -68,7 +68,7 @@ describe "POST /users" do
   examples.each do |e|
     context "#{e[:title]}" do
       before(:all) do
-        @result = Users.new.cadastro(e[:payload])
+        @result = Users.new.create(e[:payload])
       end
 
       it "valida status code #{e[:code]}" do

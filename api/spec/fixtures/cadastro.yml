@@ -4,7 +4,7 @@
     name: Nicolas Kumabe
     username: nicolasokumabe
     password: 'pwd123'
-  code: 400
+  code: 409
   error: Usuário já existe
 - title: username em branco
   payload:
