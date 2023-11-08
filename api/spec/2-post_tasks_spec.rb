@@ -1,16 +1,21 @@
 require_relative "routes/tasks"
 
 describe "POST /tasks" do
+  before(:all) do
+    @payload = { name: "Roger Guedes", username: "arabia", password: "coringa123" }
+    @result = Users.new.create(@payload)
+  end
+
   context "task criada com sucesso" do
     before(:all) do
-      payload = {
+      payload_task = {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "ALTA",
         startAt: "2023-11-27T12:30:00",
         endAt: "2023-11-27T15:35:00",
       }
-      @result = Tasks.new.create(payload)
+      @result = Tasks.new.create(payload_task, @payload[:username], @payload[:password])
     end
 
     it "valida status code 200" do
@@ -25,7 +30,7 @@ describe "POST /tasks" do
   examples = [
     {
       title: "descricao em branco",
-      payload: {
+      payload_task: {
         description: "",
         title: "API nicolasokumabe",
         priority: "ALTA",
@@ -37,7 +42,7 @@ describe "POST /tasks" do
     },
     {
       title: "titulo em branco",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "",
         priority: "ALTA",
@@ -49,7 +54,7 @@ describe "POST /tasks" do
     },
     {
       title: "prioridade em branco",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "",
@@ -61,7 +66,7 @@ describe "POST /tasks" do
     },
     {
       title: "data de inicio em branco",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "ALTA",
@@ -73,7 +78,7 @@ describe "POST /tasks" do
     },
     {
       title: "data de fim em branco",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "ALTA",
@@ -85,7 +90,7 @@ describe "POST /tasks" do
     },
     {
       title: "sem o campo descricao",
-      payload: {
+      payload_task: {
         title: "API nicolasokumabe",
         priority: "ALTA",
         startAt: "2023-11-27T12:30:00",
@@ -96,7 +101,7 @@ describe "POST /tasks" do
     },
     {
       title: "sem o campo titulo",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         priority: "ALTA",
         startAt: "2023-11-27T12:30:00",
@@ -107,7 +112,7 @@ describe "POST /tasks" do
     },
     {
       title: "sem o campo prioridade",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         startAt: "2023-11-27T12:30:00",
@@ -118,7 +123,7 @@ describe "POST /tasks" do
     },
     {
       title: "sem o campo data de inicio",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "ALTA",
@@ -129,7 +134,7 @@ describe "POST /tasks" do
     },
     {
       title: "sem o campo data de fim",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "ALTA",
@@ -140,7 +145,7 @@ describe "POST /tasks" do
     },
     {
       title: "data antiga",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "ALTA",
@@ -152,7 +157,7 @@ describe "POST /tasks" do
     },
     {
       title: "data invertida",
-      payload: {
+      payload_task: {
         description: "Tarefa para a API nicolasokumabe",
         title: "API nicolasokumabe",
         priority: "ALTA",
@@ -167,7 +172,7 @@ describe "POST /tasks" do
   examples.each do |e|
     context "#{e[:title]}" do
       before(:all) do
-        @result = Tasks.new.create(e[:payload])
+        @result = Tasks.new.create(e[:payload_task], @payload[:username], @payload[:password])
       end
 
       it "deve retornar #{e[:code]}" do
