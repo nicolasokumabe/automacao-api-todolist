@@ -3,7 +3,7 @@ require_relative "routes/tasks"
 describe "POST /tasks" do
   before(:all) do
     @payload = { name: "Roger Guedes", username: "arabia", password: "coringa123" }
-    @result = Users.new.create(@payload)
+    Users.new.create(@payload)
   end
 
   context "task criada com sucesso" do

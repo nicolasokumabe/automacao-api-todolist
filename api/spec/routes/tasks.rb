@@ -32,9 +32,9 @@ class Tasks < BaseApi
            )
   end
 
-  def find_spcfc_task(task_id)
-    username = "nicolasokumabe"
-    password = "pwd123"
+  def find_spcfc_task(task_id, username, password)
+    # username = "Tomate"
+    # password = "pwd123"
 
     basic_token = Base64.strict_encode64("#{username}:#{password}")
 
