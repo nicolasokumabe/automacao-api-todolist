@@ -1,6 +1,10 @@
 describe "GET /tasks" do
   before(:all) do
-    @payload = { name: "Caps Lock", username: "capsulado", password: "123456" }
+    @payload = {
+      name: "Caps Lock",
+      username: "capsulado",
+      password: "123456",
+    }
     @result = Users.new.create(@payload)
     @user_id = @result.parsed_response["id"]
 

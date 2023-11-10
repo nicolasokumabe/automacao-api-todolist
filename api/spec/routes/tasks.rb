@@ -46,4 +46,20 @@ class Tasks < BaseApi
              },
            )
   end
+
+  def change(payload, task_id, username, password)
+    # username = "nicolasokumabe"
+    # password = "pwd123"
+
+    basic_token = Base64.strict_encode64("#{username}:#{password}")
+
+    return self.class.put(
+             "/tasks/#{task_id}",
+             body: payload.to_json,
+             headers: {
+               "Content-Type": "application/json",
+               "Authorization": "Basic #{basic_token}",
+             },
+           )
+  end
 end

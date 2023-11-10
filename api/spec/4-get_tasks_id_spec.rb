@@ -1,7 +1,11 @@
-describe "GET /task/{task_id}" do
+describe "GET /tasks/{task_id}" do
   before(:all) do
     # Criar um novo usuário
-    @payload = { name: "Tom Mate", username: "tomate", password: "pwd123" }
+    @payload = {
+      name: "Tom Mate",
+      username: "tomate",
+      password: "pwd123",
+    }
     @result = Users.new.create(@payload)
     @user_id = @result.parsed_response["id"]
 
@@ -27,6 +31,7 @@ describe "GET /task/{task_id}" do
     end
 
     it "valida resposta da API" do
+      # "array"
       expected_response = {
         "id" => @task_id,
         "description" => "ordem dos livros de ficção",

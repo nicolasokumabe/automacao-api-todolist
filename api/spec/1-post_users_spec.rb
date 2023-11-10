@@ -4,7 +4,11 @@ require_relative "helpers"
 describe "POST /users" do
   context "cadastro com sucesso" do
     before(:all) do
-      payload = { name: "Nicolas Kumabe", username: "nicolasokumabe", password: "pwd123" }
+      payload = {
+        name: "Nicolas Kumabe",
+        username: "nicolasokumabe",
+        password: "pwd123",
+      }
       @result = Users.new.create(payload)
     end
     it "valida status code 200" do
