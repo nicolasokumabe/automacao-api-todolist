@@ -48,8 +48,8 @@ class Tasks < BaseApi
   end
 
   def change(payload, task_id, username, password)
-    # username = "nicolasokumabe"
-    # password = "pwd123"
+    # username = "CBUM"
+    # password = "meteor"
 
     basic_token = Base64.strict_encode64("#{username}:#{password}")
 

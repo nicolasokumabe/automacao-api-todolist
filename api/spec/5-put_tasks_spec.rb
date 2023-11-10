@@ -58,6 +58,7 @@ describe "PUT /tasks/{id}" do
     end
 
     it "valida toda a mudança" do
+      # "array"
       expected_response = {
         "description" => @payload_change[:description],
         "title" => @payload_change[:title],

@@ -10,4 +10,14 @@ class Users < BaseApi
              },
            )
   end
+
+  def change_pass(payload)
+    return self.class.patch(
+             "/users/change-password",
+             body: payload.to_json,
+             headers: {
+               "Content-Type": "application/json",
+             },
+           )
+  end
 end
