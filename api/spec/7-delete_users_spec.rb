@@ -9,6 +9,7 @@ describe "DELETE /users/delete-user" do
     Users.new.create(payload)
   end
 
+  # Cenários de teste
   examples = [
     {
       title: "username errado",
