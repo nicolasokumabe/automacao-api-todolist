@@ -20,4 +20,14 @@ class Users < BaseApi
              },
            )
   end
+
+  def delete_user(payload)
+    return self.class.delete(
+             "/users/delete-user",
+             body: payload.to_json,
+             headers: {
+               "Content-Type": "application/json",
+             },
+           )
+  end
 end
