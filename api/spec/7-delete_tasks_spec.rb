@@ -52,3 +52,5 @@ end
 Tarefa não encontrada
 
 Usuário não tem permissão para excluir essa tarefa
+
+Tarefa deletada com sucesso
