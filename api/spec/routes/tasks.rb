@@ -70,7 +70,7 @@ class Tasks < BaseApi
     basic_token = Base64.strict_encode64("#{username}:#{password}")
 
     return self.class.delete(
-             "/users/#{id}",
+             "/tasks/#{id}",
              headers: {
                "Content-Type": "application/json",
                "Authorization": "Basic #{basic_token}",
