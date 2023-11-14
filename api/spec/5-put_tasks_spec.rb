@@ -1,4 +1,4 @@
-describe "PUT /tasks/{id}" do
+describe "PUT /tasks/{task_id}" do
   before(:all) do
     # Criar um novo usuário
     @payload = {
