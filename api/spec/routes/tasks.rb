@@ -62,4 +62,19 @@ class Tasks < BaseApi
              },
            )
   end
+
+  def delete_task(id, username, password)
+    # username = "CBUM"
+    # password = "meteor"
+
+    basic_token = Base64.strict_encode64("#{username}:#{password}")
+
+    return self.class.delete(
+             "/users/#{id}",
+             headers: {
+               "Content-Type": "application/json",
+               "Authorization": "Basic #{basic_token}",
+             },
+           )
+  end
 end
