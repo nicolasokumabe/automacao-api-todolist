@@ -64,7 +64,7 @@ describe "Limpando Dados" do
         @result = Users.new.delete_user(e[:payload_del])
       end
 
-      it "deve retornar #{e[:code]}" do
+      it "deve retornar 200" do
         expect(@result.code).to eql 200
       end
 
