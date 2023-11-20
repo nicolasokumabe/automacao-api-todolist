@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="110" skipped="0" failures="0" errors="0" time="14.307704" timestamp="2023-11-20T09:39:55-03:00" hostname="nicolasokumabe-desktop">
+<properties>
+<property name="seed" value="48899"/>
+</properties>
+<testcase classname="spec.1-post_users_spec" name="POST /users cadastro com sucesso valida status code 200" file="./spec/1-post_users_spec.rb" time="0.000492"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users cadastro com sucesso valida id do usuário" file="./spec/1-post_users_spec.rb" time="0.000218"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users usuario existente valida status code 409" file="./spec/1-post_users_spec.rb" time="0.000188"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users usuario existente valida mensagem de erro" file="./spec/1-post_users_spec.rb" time="0.000182"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users username em branco valida status code 400" file="./spec/1-post_users_spec.rb" time="0.000172"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users username em branco valida mensagem de erro" file="./spec/1-post_users_spec.rb" time="0.000199"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users senha em branco valida status code 400" file="./spec/1-post_users_spec.rb" time="0.000215"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users senha em branco valida mensagem de erro" file="./spec/1-post_users_spec.rb" time="0.000180"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users nome em branco valida status code 400" file="./spec/1-post_users_spec.rb" time="0.000260"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users nome em branco valida mensagem de erro" file="./spec/1-post_users_spec.rb" time="0.000266"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users sem o campo nome valida status code 400" file="./spec/1-post_users_spec.rb" time="0.000152"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users sem o campo nome valida mensagem de erro" file="./spec/1-post_users_spec.rb" time="0.000186"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users sem o campo username valida status code 400" file="./spec/1-post_users_spec.rb" time="0.000113"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users sem o campo username valida mensagem de erro" file="./spec/1-post_users_spec.rb" time="0.000138"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users sem o campo senha valida status code 400" file="./spec/1-post_users_spec.rb" time="0.000220"></testcase>
+<testcase classname="spec.1-post_users_spec" name="POST /users sem o campo senha valida mensagem de erro" file="./spec/1-post_users_spec.rb" time="0.000200"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks task criada com sucesso valida status code 200" file="./spec/2-post_tasks_spec.rb" time="0.000229"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks task criada com sucesso valida id do usuário" file="./spec/2-post_tasks_spec.rb" time="0.000311"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks descricao em branco deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000137"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks descricao em branco deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000172"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks titulo em branco deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000110"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks titulo em branco deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000173"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks prioridade em branco deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000118"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks prioridade em branco deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000147"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data de inicio em branco deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000248"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data de inicio em branco deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000248"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data de fim em branco deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000114"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data de fim em branco deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000162"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo descricao deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000162"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo descricao deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000167"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo titulo deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000138"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo titulo deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000167"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo prioridade deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000184"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo prioridade deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000210"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo data de inicio deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000137"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo data de inicio deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000157"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo data de fim deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000151"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks sem o campo data de fim deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000234"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data antiga deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000131"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data antiga deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000160"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data invertida deve retornar 400" file="./spec/2-post_tasks_spec.rb" time="0.000114"></testcase>
+<testcase classname="spec.2-post_tasks_spec" name="POST /tasks data invertida deve retornar mensagem" file="./spec/2-post_tasks_spec.rb" time="0.000258"></testcase>
+<testcase classname="spec.3-get_tasks_spec" name="GET /tasks obter tarefas valida status code 200" file="./spec/3-get_tasks_spec.rb" time="0.000119"></testcase>
+<testcase classname="spec.3-get_tasks_spec" name="GET /tasks obter tarefas valida id do usuário" file="./spec/3-get_tasks_spec.rb" time="0.000188"></testcase>
+<testcase classname="spec.3-get_tasks_spec" name="GET /tasks obter tarefas valida id das tasks" file="./spec/3-get_tasks_spec.rb" time="0.000107"></testcase>
+<testcase classname="spec.4-get_tasks_id_spec" name="GET /tasks/{task_id} obter uma unica tarefa valida status code 200" file="./spec/4-get_tasks_id_spec.rb" time="0.000166"></testcase>
+<testcase classname="spec.4-get_tasks_id_spec" name="GET /tasks/{task_id} obter uma unica tarefa valida resposta da API" file="./spec/4-get_tasks_id_spec.rb" time="0.002360"></testcase>
+<testcase classname="spec.5-put_tasks_spec" name="PUT /tasks/{task_id} Tarefa modificada com sucesso valida status code" file="./spec/5-put_tasks_spec.rb" time="0.000122"></testcase>
+<testcase classname="spec.5-put_tasks_spec" name="PUT /tasks/{task_id} Tarefa modificada com sucesso valida mudança da descrição" file="./spec/5-put_tasks_spec.rb" time="0.000114"></testcase>
+<testcase classname="spec.5-put_tasks_spec" name="PUT /tasks/{task_id} Tarefa modificada com sucesso valida mudança do titulo" file="./spec/5-put_tasks_spec.rb" time="0.000088"></testcase>
+<testcase classname="spec.5-put_tasks_spec" name="PUT /tasks/{task_id} Tarefa modificada com sucesso valida mudança da prioridade" file="./spec/5-put_tasks_spec.rb" time="0.000159"></testcase>
+<testcase classname="spec.5-put_tasks_spec" name="PUT /tasks/{task_id} Tarefa modificada com sucesso valida mudança da data inicial" file="./spec/5-put_tasks_spec.rb" time="0.000067"></testcase>
+<testcase classname="spec.5-put_tasks_spec" name="PUT /tasks/{task_id} Tarefa modificada com sucesso valida mudança da data final" file="./spec/5-put_tasks_spec.rb" time="0.000062"></testcase>
+<testcase classname="spec.5-put_tasks_spec" name="PUT /tasks/{task_id} Tarefa modificada com sucesso valida toda a mudança" file="./spec/5-put_tasks_spec.rb" time="0.000084"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha trocada com sucesso valida status code" file="./spec/6-patch_users_spec.rb" time="0.000114"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha trocada com sucesso valida mensagem de sucesso" file="./spec/6-patch_users_spec.rb" time="0.000166"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password username errado deve retornar 401" file="./spec/6-patch_users_spec.rb" time="0.000114"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password username errado deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000144"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password username em branco deve retornar 401" file="./spec/6-patch_users_spec.rb" time="0.000112"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password username em branco deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000141"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password sem o campo username deve retornar 401" file="./spec/6-patch_users_spec.rb" time="0.000137"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password sem o campo username deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000188"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha atual errada deve retornar 401" file="./spec/6-patch_users_spec.rb" time="0.000132"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha atual errada deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000187"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha atual em branco deve retornar 400" file="./spec/6-patch_users_spec.rb" time="0.000167"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha atual em branco deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000152"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password sem o campo senha atual deve retornar 400" file="./spec/6-patch_users_spec.rb" time="0.000118"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password sem o campo senha atual deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000146"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha nova em branco deve retornar 400" file="./spec/6-patch_users_spec.rb" time="0.000177"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha nova em branco deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000191"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha nova com menos de 6 caracteres deve retornar 400" file="./spec/6-patch_users_spec.rb" time="0.000187"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha nova com menos de 6 caracteres deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000262"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha nova igual a senha atual deve retornar 400" file="./spec/6-patch_users_spec.rb" time="0.000129"></testcase>
+<testcase classname="spec.6-patch_users_spec" name="PATCH /users/change-password senha nova igual a senha atual deve retornar mensagem" file="./spec/6-patch_users_spec.rb" time="0.000188"></testcase>
+<testcase classname="spec.7-delete_tasks_spec" name="DELETE /tasks/{task_id} tarefa nao encontrada valida status code 404" file="./spec/7-delete_tasks_spec.rb" time="0.000147"></testcase>
+<testcase classname="spec.7-delete_tasks_spec" name="DELETE /tasks/{task_id} tarefa nao encontrada valida mensagem de erro" file="./spec/7-delete_tasks_spec.rb" time="0.000236"></testcase>
+<testcase classname="spec.7-delete_tasks_spec" name="DELETE /tasks/{task_id} tarefa de outrem valida status code 401" file="./spec/7-delete_tasks_spec.rb" time="0.000199"></testcase>
+<testcase classname="spec.7-delete_tasks_spec" name="DELETE /tasks/{task_id} tarefa de outrem valida mensagem de erro" file="./spec/7-delete_tasks_spec.rb" time="0.000166"></testcase>
+<testcase classname="spec.7-delete_tasks_spec" name="DELETE /tasks/{task_id} tarefa deletada com sucesso valida status code 200" file="./spec/7-delete_tasks_spec.rb" time="0.000114"></testcase>
+<testcase classname="spec.7-delete_tasks_spec" name="DELETE /tasks/{task_id} tarefa deletada com sucesso valida mensagem de sucesso" file="./spec/7-delete_tasks_spec.rb" time="0.000152"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user username errado deve retornar 401" file="./spec/7-delete_users_spec.rb" time="0.000204"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user username errado deve retornar mensagem de erro" file="./spec/7-delete_users_spec.rb" time="0.000242"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user username em branco deve retornar 400" file="./spec/7-delete_users_spec.rb" time="0.000237"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user username em branco deve retornar mensagem de erro" file="./spec/7-delete_users_spec.rb" time="0.000243"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user sem o campo username deve retornar 400" file="./spec/7-delete_users_spec.rb" time="0.000224"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user sem o campo username deve retornar mensagem de erro" file="./spec/7-delete_users_spec.rb" time="0.000239"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user password errada deve retornar 401" file="./spec/7-delete_users_spec.rb" time="0.000128"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user password errada deve retornar mensagem de erro" file="./spec/7-delete_users_spec.rb" time="0.000190"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user password em branco deve retornar 400" file="./spec/7-delete_users_spec.rb" time="0.000120"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user password em branco deve retornar mensagem de erro" file="./spec/7-delete_users_spec.rb" time="0.000106"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user sem o campo password deve retornar 400" file="./spec/7-delete_users_spec.rb" time="0.000205"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user sem o campo password deve retornar mensagem de erro" file="./spec/7-delete_users_spec.rb" time="0.000226"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user usuario deletado com sucesso valida status code 200" file="./spec/7-delete_users_spec.rb" time="0.000232"></testcase>
+<testcase classname="spec.7-delete_users_spec" name="DELETE /users/delete-user usuario deletado com sucesso valida mensagem de sucesso" file="./spec/7-delete_users_spec.rb" time="0.000196"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Nicolas Kumabe deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000119"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Nicolas Kumabe deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000162"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Roger Guedes deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000198"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Roger Guedes deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000239"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Caps Lock deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000111"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Caps Lock deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000126"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Tom Mate deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000257"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Tom Mate deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000154"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Chris Bumstead deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000166"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Chris Bumstead deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000190"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Ramon R Q deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000121"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Ramon R Q deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000122"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Jude Bellingham deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000208"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Jude Bellingham deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000250"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Vinícius Júnior deve retornar " file="./spec/8-limpando_dados_spec.rb" time="0.000225"></testcase>
+<testcase classname="spec.8-limpando_dados_spec" name="Limpando Dados deletando Vinícius Júnior deve retornar mensagem de erro" file="./spec/8-limpando_dados_spec.rb" time="0.000251"></testcase>
+</testsuite>
